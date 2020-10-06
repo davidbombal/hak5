@@ -1,0 +1,11 @@
+REM Script 1:
+REM =========
+REM ~~ | Open Notepad and write something:
+DELAY 1000
+GUI r
+DELAY 100
+STRING notepad.exe
+ENTER
+DELAY 1000
+STRING You have been hacked
+
