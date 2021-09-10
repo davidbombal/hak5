@@ -1,0 +1,12 @@
+TAB
+DELAY 250
+GUI b
+DELAY 250
+CTRL SHIFT n
+DELAY 500
+CTRL l
+DELAY 1000
+STRING https://youtu.be/dQw4w9WgXcQ
+ENTER
+
+REM Credit for this script goes to MG: https://twitter.com/_mg_
