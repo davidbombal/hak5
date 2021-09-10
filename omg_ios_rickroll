@@ -1,0 +1,14 @@
+GUI SPACE
+DELETE
+DELAY 100
+STRING safari
+ENTER
+DELAY 500
+GUI l
+DELAY 100
+STRING https://youtu.be/dQw4w9WgXcQ
+DELAY 100
+ENTER
+ESC
+
+REM Credit for this script goes to MG: https://twitter.com/_mg_
