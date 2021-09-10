@@ -1,0 +1,21 @@
+TAB
+DELAY 250
+GUI c
+DELAY 500
+CTRL f
+DELAY 250
+STRING 123
+DELAY 500
+ENTER
+DELAY 250
+TAB
+ENTER
+DELAY 250
+TAB
+TAB
+LEFT
+ENTER
+
+REM Change 123 to the number you want to call
+REM You use at your own risk
+REM May not work, and may require work
