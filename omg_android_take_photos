@@ -1,0 +1,23 @@
+TAB
+DELAY 250
+GUI f
+DELAY 350
+CTRL l
+LEFT
+STRING camera
+DELAY 300
+ENTER
+ENTER
+DELAY 300
+ENTER
+ENTER
+DELAY 300
+ENTER
+ENTER
+DOWN
+ENTER
+DOWN
+ENTER
+
+REM You use at your own risk
+REM May not work, and may require work
