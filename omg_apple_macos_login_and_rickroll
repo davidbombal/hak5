@@ -1,0 +1,17 @@
+VID 05AC
+PID 0263
+UPARROW
+DELAY 2000
+STRING SecretPassword
+ENTER
+DELAY 2000
+GUI SPACE
+DELAY 500
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ 
+DELAY 1000
+ENTER
+ENTER
+TAB
+ENTER
+
+REM Credit for this script goes to MG: https://twitter.com/_mg_
