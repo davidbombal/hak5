@@ -1,0 +1,24 @@
+VID 05AC
+PID 0263
+UPARROW
+DELAY 2000
+ENTER
+DELAY 2000
+STRING SecretPassword
+ENTER
+DELAY 5000
+ALT F2
+DELAY 50
+STRING firefox
+DELAY 50
+ENTER
+DELAY 2000
+STRING https://www.youtube.com/watch?v=dQw4w9WgXc
+ENTER
+ENTER
+TAB
+ENTER
+DELAY 2000
+F
+
+REM I would not have been able to create this script without MG's help. Thanks MG! https://twitter.com/_mg_
