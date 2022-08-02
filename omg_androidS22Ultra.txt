@@ -35,17 +35,17 @@ REM # open apk with My Files
 REM # -----------------------------------------------------------
 
 GUI r
-DELAY 50
+DELAY 100
 TAB
-DELAY 50
+DELAY 100
 TAB
-DELAY 50
+DELAY 100
 TAB
-DELAY 50
+DELAY 100
 ENTER
-DELAY 50
+DELAY 100
 TAB
-DELAY 50
+DELAY 100
 ENTER
 
 REM # -----------------------------------------------------------
