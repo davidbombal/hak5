@@ -1,11 +1,10 @@
 # Use this command to start the server on port 80: sudo python SimpleHTTPPutServer 80
 
-import SimpleHTTPServer
-import BaseHTTPServer
+import http.server
 
-class SputHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+class SputHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_PUT(self):
-        print self.headers
+        print (self.headers)
         length = int(self.headers["Content-Length"])
         path = self.translate_path(self.path)
         with open(path, "wb") as dst:
@@ -13,5 +12,4 @@ class SputHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    SimpleHTTPServer.test(HandlerClass=SputHTTPRequestHandler)
-
+    http.server.test(HandlerClass=SputHTTPRequestHandler)
